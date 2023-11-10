@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "detail_orders",
+  "info": {
+    "singularName": "detail-order",
+    "pluralName": "detail-orders",
+    "displayName": "detail_order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "barang": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::barang.barang",
+      "inversedBy": "detail_order"
+    },
+    "jumlah_pcs": {
+      "type": "integer"
+    },
+    "jumlah_pack": {
+      "type": "integer"
+    },
+    "gross": {
+      "type": "float"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order.order",
+      "inversedBy": "detail_orders"
+    }
+  }
+}

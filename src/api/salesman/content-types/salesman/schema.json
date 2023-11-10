@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "salesmen",
+  "info": {
+    "singularName": "salesman",
+    "pluralName": "salesmen",
+    "displayName": "salesman",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "outlets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::outlet.outlet",
+      "mappedBy": "salesman"
+    },
+    "periode": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::periode.periode",
+      "inversedBy": "salesman"
+    },
+    "aktual_outlet": {
+      "type": "integer"
+    },
+    "target_outlet": {
+      "type": "integer"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "salesman"
+    }
+  }
+}

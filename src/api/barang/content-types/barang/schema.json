@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "barangs",
+  "info": {
+    "singularName": "barang",
+    "pluralName": "barangs",
+    "displayName": "barang"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "saldo_pack": {
+      "type": "integer"
+    },
+    "saldo_pcs": {
+      "type": "integer"
+    },
+    "pcs_per_pack": {
+      "type": "integer"
+    },
+    "harga_pcs": {
+      "type": "integer"
+    },
+    "harga_pack": {
+      "type": "integer"
+    },
+    "detail_order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::detail-order.detail-order",
+      "mappedBy": "barang"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "periodes",
+  "info": {
+    "singularName": "periode",
+    "pluralName": "periodes",
+    "displayName": "periode"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "tanggal_mulai": {
+      "type": "date"
+    },
+    "tanggal_akhir": {
+      "type": "date"
+    },
+    "status": {
+      "type": "string"
+    },
+    "salesman": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::salesman.salesman",
+      "mappedBy": "periode"
+    }
+  }
+}

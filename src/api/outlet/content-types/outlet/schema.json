@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "outlets",
+  "info": {
+    "singularName": "outlet",
+    "pluralName": "outlets",
+    "displayName": "outlet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "salesman": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::salesman.salesman",
+      "inversedBy": "outlets"
+    },
+    "nama": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "alamat": {
+      "type": "text"
+    },
+    "kecamatan": {
+      "type": "string"
+    },
+    "kelurahan": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}
